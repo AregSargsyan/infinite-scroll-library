@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular11-infinite-scroller": {
+      "projectType": "library",
+      "root": "projects/angular11-infinite-scroller",
+      "sourceRoot": "projects/angular11-infinite-scroller/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/angular11-infinite-scroller/tsconfig.lib.json",
+            "project": "projects/angular11-infinite-scroller/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular11-infinite-scroller/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular11-infinite-scroller/src/test.ts",
+            "tsConfig": "projects/angular11-infinite-scroller/tsconfig.spec.json",
+            "karmaConfig": "projects/angular11-infinite-scroller/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular11-infinite-scroller/tsconfig.lib.json",
+              "projects/angular11-infinite-scroller/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular11-infinite-scroller"
 }
