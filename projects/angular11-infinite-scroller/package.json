@@ -1,11 +1,11 @@
 {
   "name": "angular11-infinite-scroller",
-  "version": "1.1.2",
+  "version": "1.2.3",
   "description": "An infinite scroll directive for Angular",
   "author": "Areg Sargsyan",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/AregSargsyan/infinite-scroll-library"
   },
   "keywords": [
     "Angular",
